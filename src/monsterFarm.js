@@ -5,7 +5,6 @@ export class Monster {
     this.hunger = 15;
     this.thirst = 20;
     this.sleep = 10;
-
   }
 
   setHunger() {
@@ -74,8 +73,25 @@ export class Monster {
     }
   }
 
-  // feed() {
-  //   this.hunger = 2;
-  // }
+  feed(amount) {
+    let that = this;
+      return function(food) {
+        console.log(food);
+      that.hunger += amount;
+      return 'the monster ate the ${food}! Food level goes up ${amount}!';
+    }
+  }
+  eatSnack(food) {
+    console.log(food);
+    this.feed(2);
+  }
+
+  hydrate() {
+    this.thirst += 5;
+  }
+
+  sleep() {
+    this.sleep = 10;
+  }
 
 }

@@ -58,4 +58,8 @@ describe('Monster', function() {
     expect(monty.didMonsterKillYouFromSleepCraze()).toEqual(true);
   });
 
+  it('should return hunger level up by the amount corresponding to food eaten', function() {
+    expect(monty.eatSnack("human toes")).toEqual("Monty the monster ate the human toes! Food level goes up 2!");
+  });
+
 });
