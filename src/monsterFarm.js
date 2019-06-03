@@ -184,4 +184,17 @@ export class Monster {
     return this.replenishSleep(10)(rest);
   }
 
+  isGameOver(){
+    if (this.hunger <= 0) {
+      return true;
+    }
+    if (this.thirst <= 0) {
+      return true;
+    }
+    if (this.sleep <= 0) {
+      return true;
+    }
+    return false;
+  }
+
 }

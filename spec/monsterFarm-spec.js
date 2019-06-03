@@ -94,4 +94,19 @@ describe('Monster', function() {
     expect(monty.sleepThruNight("rest")).toEqual("Monty the monster had a rest! Recharge level goes up 10!");
   });
 
+  it('should return true when hunger equals 0', function() {
+    monty.hunger = 0;
+    expect(monty.isGameOver()).toEqual(true);
+  });
+
+  it('should return true when thirst equals 0', function() {
+    monty.thirst = 0;
+    expect(monty.isGameOver()).toEqual(true);
+  });
+
+  it('should return true when sleep equals 0', function() {
+    monty.sleep = 0;
+    expect(monty.isGameOver()).toEqual(true);
+  });
+
 });
