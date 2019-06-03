@@ -58,8 +58,40 @@ describe('Monster', function() {
     expect(monty.didMonsterKillYouFromSleepCraze()).toEqual(true);
   });
 
-  it('should return hunger level up by the amount corresponding to food eaten', function() {
+  it('should return hunger level up by the amount corresponding to snack eaten', function() {
     expect(monty.eatSnack("human toes")).toEqual("Monty the monster ate the human toes! Food level goes up 2!");
+  });
+
+  it('should return hunger level up by the amount corresponding to yum eaten', function() {
+    expect(monty.eatYum("Yummy")).toEqual("Monty the monster ate the Yummy! Food level goes up 10!");
+  });
+
+  it('should return hunger level down by the amount corresponding to yuck eaten', function() {
+    expect(monty.eatYuck("Gross")).toEqual("Monty the monster ate the Gross! Food level goes down -10!");
+  });
+
+  it('should return thirst level up by the amount corresponding to water drunk', function() {
+    expect(monty.drinkWater("water")).toEqual("Monty the monster drank the water! Hydration level goes up 5!");
+  });
+
+  it('should return thirst level up by the amount corresponding to pedialyte drunk', function() {
+    expect(monty.drinkPedialyte("pedialyte")).toEqual("Monty the monster drank the pedialyte! Hydration level goes up 15!");
+  });
+
+  it('should return thirst level down by the amount corresponding to gasoline drunk', function() {
+    expect(monty.drinkGasoline("gasoline")).toEqual("Monty the monster drank the gasoline! Hydration level goes down -16!");
+  });
+
+  it('should return sleep level up by the amount corresponding to a nap', function() {
+    expect(monty.sleepNap("nap")).toEqual("Monty the monster had a nap! Recharge level goes up 2!");
+  });
+
+  it('should return sleep level down by the amount corresponding to a nightmare', function() {
+    expect(monty.sleepNightMare("nightmare")).toEqual("Monty the monster had a nightmare! Recharge level goes down -5!");
+  });
+
+  it('should return sleep level up by the amount corresponding to a sleep throught the night', function() {
+    expect(monty.sleepThruNight("rest")).toEqual("Monty the monster had a rest! Recharge level goes up 10!");
   });
 
 });

@@ -76,7 +76,16 @@ export class Monster {
   feed(amount) {
       return (food) => {
       this.hunger += amount;
-      return `${this.name} the monster ate the ${food}! Food level goes up ${amount}!`;
+      if(amount === 0)
+      {
+        return `${this.name} the monster ate the ${food}! Food level stays the same!`;
+      } else if(amount > 0)
+        {
+          return `${this.name} the monster ate the ${food}! Food level goes up ${amount}!`;
+        } else if(amount < 0)
+        {
+          return `${this.name} the monster ate the ${food}! Food level goes down ${amount}!`;
+        }
     }
   }
 
@@ -99,12 +108,80 @@ export class Monster {
     return this.feed(2)(food);
   }
 
-  hydrate() {
-    this.thirst += 5;
+  eatYum(yum)
+  {
+    return this.feed(10)(yum);
   }
 
-  sleep() {
-    this.sleep = 10;
+  eatYuck(yuck)
+  {
+    return this.feed(-10)(yuck);
+  }
+
+  eatRandom(mysteryFood)
+  {
+    let randomFood = Math.floor(Math.random()*20) + 1;
+    randomFood *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+    return this.feed(randomFood)(mysteryFood)
+  }
+
+  getHydrated(amount) {
+    return (liquid) => {
+      this.thirst += amount;
+      if(amount === 0)
+      {
+        return `${this.name} the monster drank the ${liquid}! Hydration level stays the same!`;
+      } else if (amount > 0)
+      {
+        return `${this.name} the monster drank the ${liquid}! Hydration level goes up ${amount}!`;
+      } else if (amount < 0)
+      {
+        return `${this.name} the monster drank the ${liquid}! Hydration level goes down ${amount}!`;
+      }
+    }
+  }
+
+  drinkWater(water) {
+    return this.getHydrated(5)(water);
+  }
+
+  drinkPedialyte(pedialyte) {
+    return this.getHydrated(15)(pedialyte);
+  }
+
+  drinkGasoline(gasoline) {
+    return this.getHydrated(-16)(gasoline);
+  }
+
+  drinkMystery(mystery) {
+    let randomLiq = Math.floor(Math.random()*20) + 1;
+    randomLiq *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+    return this.feed(randomLiq)(mystery);
+  }
+
+  replenishSleep(amount) {
+    return (type) => {
+      this.sleep += amount;
+      if (amount > 0)
+      {
+        return `${this.name} the monster had a ${type}! Recharge level goes up ${amount}!`;
+      } else if (amount < 0)
+      {
+        return `${this.name} the monster had a ${type}! Recharge level goes down ${amount}!`;
+      }
+    }
+  }
+
+  sleepNap(nap) {
+    return this.replenishSleep(2)(nap);
+  }
+
+  sleepNightMare(nightmare) {
+    return this.replenishSleep(-5)(nightmare);
+  }
+
+  sleepThruNight(rest) {
+    return this.replenishSleep(10)(rest);
   }
 
 }
