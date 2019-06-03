@@ -74,16 +74,29 @@ export class Monster {
   }
 
   feed(amount) {
-    let that = this;
-      return function(food) {
-        console.log(food);
-      that.hunger += amount;
-      return 'the monster ate the ${food}! Food level goes up ${amount}!';
+      return (food) => {
+      this.hunger += amount;
+      return `${this.name} the monster ate the ${food}! Food level goes up ${amount}!`;
     }
   }
+
   eatSnack(food) {
-    console.log(food);
-    this.feed(2);
+    // console.log(food);
+    //
+    // let feedfunction = this.feed(2);
+    //
+    //
+    // let feedfunction = (food) => {
+    //   console.log(food);
+    //   console.log(amount);
+    //   console.log(this);
+    // this.hunger += amount;
+    // return `${this.name} the monster ate the ${food}! Food level goes up ${amount}!`;
+    //
+    //
+    // feedfunction(food);
+
+    return this.feed(2)(food);
   }
 
   hydrate() {
