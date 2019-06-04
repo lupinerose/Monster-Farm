@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -16,6 +17,7 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
+    new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'MonsterFarm',
       template: './src/index.html',
@@ -31,6 +33,12 @@ module.exports = {
           'css-loader'
         ]
       },
+      {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: [
+             'file-loader'
+           ]
+       },
       {
         test: /\.js$/,
         exclude: [

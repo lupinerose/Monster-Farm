@@ -108,18 +108,15 @@ export class Monster {
     return this.feed(2)(food);
   }
 
-  eatYum(yum)
-  {
+  eatYum(yum) {
     return this.feed(10)(yum);
   }
 
-  eatYuck(yuck)
-  {
+  eatYuck(yuck) {
     return this.feed(-10)(yuck);
   }
 
-  eatRandom(mysteryFood)
-  {
+  eatRandom(mysteryFood) {
     let randomFood = Math.floor(Math.random()*20) + 1;
     randomFood *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
     return this.feed(randomFood)(mysteryFood)
