@@ -2,6 +2,7 @@ export class Monster {
   constructor (name, type){
     this.name = name;
     this.type = type;
+    // this.strength = Math.floor((Math.random()*20) + 1);
     this.hunger = 15;
     this.thirst = 20;
     this.sleep = 10;
