@@ -41,9 +41,239 @@ $(document).ready(function() {
     });
   });
 
-    // $("#hunger1").html(this.hunger);
-    // $("#sleep1").html(this.sleep);
-    // $("#thirst1").html(this.thirst);
+  $("#item3").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[0];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+  $("#item4").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[1];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+
+  $("#item5").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[2];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+
+  $("#item6").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[3];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+
+  $("#item6").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[4];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+
+  $("#item7").click(function() {
+    $(this).toggleClass("selected");
+    $(this).toggleClass("unselected");
+    let thisMonster = monsterList[5];
+    $("#snack").click(function() {
+      thisMonster.eatSnack();
+    });
+    $("#yum").click(function() {
+      thisMonster.eatYum();
+    });
+    $("#yuck").click(function() {
+      thisMonster.eatYuck();
+    });
+    $("#eatRandom").click(function() {
+      thisMonster.eatRandom();
+    });
+    $("#water").click(function() {
+      thisMonster.drinkWater();
+    });
+    $("#pedialyte").click(function() {
+      thisMonster.drinkPedialyte();
+    });
+    $("#gasoline").click(function() {
+      thisMonster.drinkGasoline();
+    });
+    $("#mysteryDrink").click(function() {
+      thisMonster.drinkMystery();
+    });
+    $("#nap").click(function() {
+      thisMonster.sleepNap();
+    });
+    $("#nightmare").click(function() {
+      thisMonster.sleepNightMare();
+    });
+    $("#thruNight").click(function() {
+      thisMonster.sleepThruNight();
+    });
+  });
+
 
   function attributeTracker() {
     let num = 1;

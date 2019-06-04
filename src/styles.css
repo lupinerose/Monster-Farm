@@ -40,10 +40,22 @@ body {
 
 }
 
+.selected {
+  border: 3px solid red;
+}
+
+.unselected {
+  border: 3px solid black;
+}
+
 #item1 {
   grid-column: 1 /2;
   grid-row: 1 / 2;
   border: 3px solid black;
+}
+
+#item3:hover {
+  cursor: pointer;
 }
 
 #item2 {
@@ -51,35 +63,29 @@ body {
   grid-row: 1 / 2;
   border: 3px solid black;
 }
-
+/* Monster divs */
 #item3 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  border: 3px solid black;
   display: none;
-
 }
 #item4 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  border: 3px solid black;
   display: none;
 }
 #item5 {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-  border: 3px solid black;
   display: none;
 }
 #item6 {
   grid-column: 4 / 5;
   grid-row: 2 / 3;
-  border: 3px solid black;
   display: none;
 }
 #item7 {
   grid-column: 5 / 6;
   grid-row: 2 / 3;
-  border: 3px solid black;
   display: none;
 }

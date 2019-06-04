@@ -154,7 +154,7 @@ export class Monster {
   drinkMystery(mystery) {
     let randomLiq = Math.floor(Math.random()*20) + 1;
     randomLiq *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
-    return this.feed(randomLiq)(mystery);
+    return this.getHydrated(randomLiq)(mystery);
   }
 
   replenishSleep(amount) {
